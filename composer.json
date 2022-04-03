@@ -1,0 +1,25 @@
+{
+    "name": "dakinquelia/cms-console",
+    "description": "Console d'application",
+    "keywords": ["cms", "php", "console"],
+    "homepage": "http://www.danielchalseche.fr.cr/",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Dakin Quelia",
+            "homepage": "http://www.danielchalseche.fr.cr/"
+        }
+    ],
+    "bin": [
+        "bin/console"
+    ],
+    "require": {
+        "symfony/console": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Console\\": "Console"
+        },
+        "classmap": ["Console"]
+    }
+}

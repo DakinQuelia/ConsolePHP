@@ -1,0 +1,8 @@
+{% extends '_layouts/{{layout}}.html' %}
+{% import '_Macros/global.html' as global %}
+
+{% block title %}{{ controller_name }}{% endblock %}
+
+{% block content %}
+<p>Bienvenue sur la vue de votre contrôleur :: {{ controller_name }}</p>
+{% endblock %}

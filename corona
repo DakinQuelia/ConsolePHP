@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+/*======================================================================*\
+||  Corona CMS						                                    ||
+||  Fichier     : console                                               ||
+||  Version     : 1.0.0.                                	            ||
+||  Auteur(s)   : Dakin Quelia						                    ||
+||  ------------------------------------------------------------------  ||
+||  Copyright ©2021 Corona CMS - codé par Dakin Quelia                  ||
+\*======================================================================*/
+define('ROOT', __DIR__);
+
+require(ROOT . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
+
+use Console\Console;
+
+// Avertissement
+if (false === in_array(\PHP_SAPI, ['cli', 'phpdbg', 'embed'], true)) 
+{
+    echo 'Avertissement : La console ne peut être invoquée que via la version CLI de PHP et NON PAS via '.\PHP_SAPI.' SAPI'.\PHP_EOL;
+}
+
+// On initialise la classe Console
+$application = new Console(dirname(__DIR__));
+
+// On lance la console
+$application->run();
+
+?>
